@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular en Programacion</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <h2>¿Qué es Angular?</h2>
+        <p align="left">En resumen, Angular es:
+            Un framework de JavaScript:
+            Angular es un conjunto de herramientas y patrones de diseño que facilitan la construcción de aplicaciones
+            web complejas, proporcionando una estructura organizada y reutilizable.
+            Basado en TypeScript:
+            TypeScript es un superset de JavaScript que añade tipado estático, lo que ayuda a detectar errores durante
+            el desarrollo y a mejorar la calidad del código.
+            Para aplicaciones web:
+            Angular se enfoca en el desarrollo de aplicaciones web, especialmente aplicaciones de una sola página, donde
+            la navegación y la actualización de contenido se realizan sin recargar la página completa.
+            Escalable y mantenible:
+            Angular facilita la creación de aplicaciones modulares y escalables, gracias a su arquitectura basada en
+            componentes y la posibilidad de reutilizar código.
+            Características clave de Angular:
+            Componentes:
+            Angular se basa en componentes, que son unidades de código reutilizables que representan partes de la
+            interfaz de usuario y su lógica asociada.
+            Enrutamiento:
+            Angular proporciona un sistema de enrutamiento que permite la navegación entre diferentes vistas de la
+            aplicación, facilitando la creación de SPAs.
+            Enlace de datos:
+            Angular ofrece mecanismos para sincronizar datos entre el modelo y la vista, lo que permite que los cambios
+            en los datos se reflejen automáticamente en la interfaz de usuario y viceversa.
+            Inyección de dependencias:
+            Angular utiliza la inyección de dependencias para gestionar las relaciones entre los componentes y
+            servicios, facilitando el mantenimiento y la prueba de la aplicación.
+            Herramientas de desarrollo:
+            Angular incluye un conjunto de herramientas para facilitar el desarrollo, como la CLI (interfaz de línea de
+            comandos) para crear proyectos, generar código y ejecutar pruebas.
+            En resumen, Angular es una herramienta poderosa para construir aplicaciones web modernas, escalables y
+            mantenibles, aprovechando las ventajas de TypeScript y un enfoque basado en componentes.</p>
+        <h3>Ejemplo Básico:</h3>
+        <input ng-model="name" placeholder="Ingresa tu nombre">
+        <p>Hola {{name}}!</p>
+
+        <button ng-click="showMessage()">Mostrar Mensaje</button>
+    </div>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope) {
+            $scope.name = "Mundo";
+            $scope.showMessage = function () {
+                alert('Hola ' + $scope.name + ' desde Angular!');
+            };
+        });
+    </script>
+</body>
+
+</html>
